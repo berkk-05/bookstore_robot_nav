@@ -3,7 +3,7 @@
 Bu proje, ROS tabanlı bir servis robotunun simüle edilmiş bir kütüphane ortamında (AWS RoboMaker Bookstore World) SLAM haritalaması, otonom navigasyon ve görev noktalarında QR kod doğrulaması yapmasını sağlayan entegre bir sistemdir.
 
 ### 🎥 Otonom Navigasyon Demo Videosu
-*Sistemin Gazebo üzerinde nasıl çalıştığını görmek için aşağıdaki görsele tıklayın:*
+*Sistemin demo videosunu izlemek için aşağıdaki görsele tıklayın:*
 [![Proje Demo Videosu](https://img.youtube.com/vi/lxL1O7VD9w4/maxresdefault.jpg)](https://www.youtube.com/watch?v=lxL1O7VD9w4)
 
 ## 🤖 Proje Özeti
