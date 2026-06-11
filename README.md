@@ -51,7 +51,7 @@ sudo apt-get install libzbar-dev
 ## 🚀 Kurulum
 
 > ⚠️ **DEĞERLENDİRİCİLER İÇİN ÖNEMLİ NOT (Dosya Yolları):** > Bu projede harita ve yapılandırma dosyalarının yolları, geliştirmeyi yapan orijinal bilgisayarın yerel çalışma alanına (`/home/berk/ders_ws/...`) göre ayarlanmıştır.
-> * Projeyi indirip **kendi sisteminizde çalıştırarak test edecekseniz**, `map.yaml`, `task_manager.py` ve ilgili `.launch` dosyalarındaki dizinleri kendi çalışma alanınıza (örneğin `~/catkin_ws/...`) göre düzenlemeniz gerekmektedir. Aksi takdirde sistem dosyaları bulamayacağı için hata verecektir.
+> * Projeyi indirip **kendi sisteminizde çalıştırarak test edecekseniz**, `mission.yaml` ve `task_manager.py` dosyalarındaki dizinleri kendi çalışma alanınıza (örneğin `~/catkin_ws/...`) göre düzenlemeniz gerekmektedir. Aksi takdirde sistem dosyaları bulamayacağı için hata verecektir.
 > * Eğer projeyi yerelde çalıştırmadan, yalnızca **kodları ve demo videosunu inceleyerek değerlendirme yapacaksanız** dosya yollarında hiçbir değişiklik yapmanıza gerek yoktur.
 > 
 > 
@@ -202,6 +202,3 @@ Summary:
 
 ```
 
-```
-
-```
