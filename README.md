@@ -1,8 +1,4 @@
-Kurulum aşamasının en başına, projeyi inceleyecek kişilerin (hoca veya asistanın) hemen dikkatini çekecek şekilde o önemli dosya yolu uyarısını ekledim.
 
-Aşağıdaki güncel metni kopyalayıp doğrudan `README.md` dosyanın içine yapıştırabilirsin:
-
-```markdown
 # Otonom Kütüphane Robotu
 
 Bu proje, ROS tabanlı bir servis robotunun simüle edilmiş bir kütüphane ortamında (AWS RoboMaker Bookstore World) SLAM haritalaması, otonom navigasyon ve görev noktalarında QR kod doğrulaması yapmasını sağlayan entegre bir sistemdir.
