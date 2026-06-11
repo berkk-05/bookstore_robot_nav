@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Task Manager launch - starts after navigation is ready -->
+  <arg name="config_file" default="$(find bookstore_robot_nav)/config/mission.yaml"/>
+
+  <!-- Set config file parameter -->
+  <param name="/bookstore_robot_nav/config_file" value="$(arg config_file)"/>
+
+  <!-- Task Manager Node -->
+  <node pkg="bookstore_robot_nav" type="task_manager" name="task_manager" output="screen">
+  </node>
+
+  <!-- QR Reader Node -->
+  <node pkg="bookstore_robot_nav" type="qr_reader" name="qr_reader" output="screen">
+  </node>
+
+</launch>
+

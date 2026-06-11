@@ -1,0 +1,1 @@
+material QR/Yeni { technique { pass { texture_unit { texture LOC=YENI_CIKANLAR.png } } } }

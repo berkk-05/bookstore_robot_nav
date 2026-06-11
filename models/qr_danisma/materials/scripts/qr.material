@@ -1,0 +1,1 @@
+material QR/Danisma { technique { pass { texture_unit { texture LOC=DANISMA_MASASI.png } } } }

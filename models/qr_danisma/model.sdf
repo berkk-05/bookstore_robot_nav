@@ -1,0 +1,1 @@
+<?xml version="1.0" ?><sdf version="1.5"><model name="qr_danisma"><static>true</static><link name="link"><visual name="visual"><geometry><box><size>0.4 0.4 0.01</size></box></geometry><material><script><uri>model://qr_danisma/materials/scripts</uri><uri>model://qr_danisma/materials/textures</uri><name>QR/Danisma</name></script></material></visual></link></model></sdf>

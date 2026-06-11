@@ -1,0 +1,1 @@
+material QR/Roman { technique { pass { texture_unit { texture LOC=ROMAN_BOLUMU.png } } } }

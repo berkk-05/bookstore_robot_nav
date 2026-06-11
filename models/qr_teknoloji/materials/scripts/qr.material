@@ -1,0 +1,1 @@
+material QR/Teknoloji { technique { pass { texture_unit { texture LOC=TEKNOLOJI_STANDI.png } } } }

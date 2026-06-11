@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="bookstore">
+    <!-- Include the bookstore world from aws-robomaker -->
+    <include>
+      <uri>model://aws_robomaker_retail_RetailShopFloor_01</uri>
+      <name>floor</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- Lighting -->
+    <light name="sun" type="directional">
+      <cast_shadows>1</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.1 0.1 -0.9</direction>
+    </light>
+
+    <!-- Ground -->
+    <ground_plane>
+      <static>1</static>
+    </ground_plane>
+
+    <!-- Physics -->
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Gazebo plugin for gazebo_ros -->
+    <plugin name="gazebo_ros_api_plugin" filename="libgazebo_ros_api_plugin.so" />
+
+    <!-- QR Code 1: qr_danisma -->
+    <model name="qr_danisma">
+      <static>1</static>
+      <pose>2.5 1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </visual>
+          <material>
+            <script>
+              <uri>model://aws_robomaker_retail_BookshelfA_01/materials/scripts</uri>
+              <name>qr</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </collision>
+        </collision>
+      </link>
+    </model>
+
+    <!-- QR Code 2: qr_teknoloji -->
+    <model name="qr_teknoloji">
+      <static>1</static>
+      <pose>-2.5 3.0 0.5 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </visual>
+          <material>
+            <script>
+              <uri>model://aws_robomaker_retail_BookshelfA_01/materials/scripts</uri>
+              <name>qr</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </collision>
+        </collision>
+      </link>
+    </model>
+
+    <!-- QR Code 3: qr_roman -->
+    <model name="qr_roman">
+      <static>1</static>
+      <pose>-2.0 -2.5 0.5 0 0 -1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </visual>
+          <material>
+            <script>
+              <uri>model://aws_robomaker_retail_BookshelfA_01/materials/scripts</uri>
+              <name>qr</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </collision>
+        </collision>
+      </link>
+    </model>
+
+    <!-- QR Code 4: qr_okuma -->
+    <model name="qr_okuma">
+      <static>1</static>
+      <pose>1.5 -1.5 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </visual>
+          <material>
+            <script>
+              <uri>model://aws_robomaker_retail_BookshelfA_01/materials/scripts</uri>
+              <name>qr</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </collision>
+        </collision>
+      </link>
+    </model>
+
+    <!-- QR Code 5: qr_yeni -->
+    <model name="qr_yeni">
+      <static>1</static>
+      <pose>0.0 -3.5 0.5 0 0 0.785</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </visual>
+          <material>
+            <script>
+              <uri>model://aws_robomaker_retail_BookshelfA_01/materials/scripts</uri>
+              <name>qr</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.01</size>
+            </geometry>
+          </collision>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

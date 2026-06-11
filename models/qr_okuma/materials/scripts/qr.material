@@ -1,0 +1,1 @@
+material QR/Okuma { technique { pass { texture_unit { texture LOC=OKUMA_MASASI.png } } } }
