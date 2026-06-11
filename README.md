@@ -1,3 +1,4 @@
+[![Proje Demo Videosu](https://img.youtube.com/vi/lxL1O7VD9w4/maxresdefault.jpg)](https://www.youtube.com/watch?v=lxL1O7VD9w4)
 
 # Otonom Kütüphane Robotu
 
