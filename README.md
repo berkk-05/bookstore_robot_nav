@@ -136,16 +136,31 @@ Robotun gideceği hedefler ve bu hedeflerde beklenen QR kod verileri `config/mis
 
 ```yaml
 locations:
-  - INFORMATION_DESK
-  - SCIENCE_SECTION
+  - DANISMA
+  - TEKNOLOJI
+  - ROMAN
+  - OKUMA
+  - YENI_CIKANLAR
 
-INFORMATION_DESK:
-  goal: {x: 2.5, y: 1.0, yaw: 0.0}
-  qr_expected: "LOCATION=INFORMATION_DESK"
+DANISMA:
+  goal: {x: -0.70679, y: 5.0264, yaw: 0.160657}
+  qr_expected: "LOC=DANISMA_MASASI"
 
-SCIENCE_SECTION:
-  goal: {x: -2.5, y: 3.0, yaw: 1.57}
-  qr_expected: "LOCATION=SCIENCE_SECTION"
+TEKNOLOJI:
+  goal: {x: -0.74578, y: -1.5736, yaw: -1.260829}
+  qr_expected: "LOC=TEKNOLOJI_STANDI"
+
+ROMAN:
+  goal: {x: 6.6371, y: 0.53398, yaw: 0.012323}
+  qr_expected: "LOC=ROMAN_BOLUMU"
+
+OKUMA:
+  goal: {x: -5.2959, y: -3.7372, yaw: -2.985271}
+  qr_expected: "LOC=OKUMA_MASASI"
+
+YENI_CIKANLAR:
+  goal: {x: 0.51707, y: -5.8475, yaw: -1.633661}
+  qr_expected: "LOC=YENI_CIKANLAR"
 
 ```
 
@@ -166,27 +181,18 @@ Görev tamamlandığında robot bir görev özeti çıkarır ve bu dosya `~/catk
 
 ```text
 === MISSION REPORT ===
-  INFORMATION_DESK: SUCCESS
-  SCIENCE_SECTION: SUCCESS
-  NOVEL_SECTION: SKIPPED
-  CHECKOUT_AREA: SUCCESS
+  DANISMA: SUCCESS
+  TEKNOLOJI: SKIPPED
+  ROMAN: SUCCESS
+  OKUMA: SUCCESS
+  YENI_CIKANLAR: SUCCESS
 
 Summary:
-  SUCCESS: 3
+  SUCCESS: 4
   SKIPPED: 1
   FAIL: 0
 =====================
 
-```
-
-## 🧑‍💻 Yazar / Katkıda Bulunanlar
-
-KTÜN (Konya Teknik Üniversitesi) Robotik Dersi Projesi
-
-## 📜 Lisans
-
-MIT License
 
 ```
 
-```
