@@ -1,3 +1,8 @@
+Kurulum aşamasının en başına, projeyi inceleyecek kişilerin (hoca veya asistanın) hemen dikkatini çekecek şekilde o önemli dosya yolu uyarısını ekledim.
+
+Aşağıdaki güncel metni kopyalayıp doğrudan `README.md` dosyanın içine yapıştırabilirsin:
+
+```markdown
 # Otonom Kütüphane Robotu
 
 Bu proje, ROS tabanlı bir servis robotunun simüle edilmiş bir kütüphane ortamında (AWS RoboMaker Bookstore World) SLAM haritalaması, otonom navigasyon ve görev noktalarında QR kod doğrulaması yapmasını sağlayan entegre bir sistemdir.
@@ -49,11 +54,17 @@ sudo apt-get install libzbar-dev
 
 ## 🚀 Kurulum
 
+> ⚠️ **DEĞERLENDİRİCİLER İÇİN ÖNEMLİ NOT (Dosya Yolları):** > Bu projede harita ve yapılandırma dosyalarının yolları, geliştirmeyi yapan orijinal bilgisayarın yerel çalışma alanına (`/home/berk/ders_ws/...`) göre ayarlanmıştır.
+> * Projeyi indirip **kendi sisteminizde çalıştırarak test edecekseniz**, `map.yaml`, `task_manager.py` ve ilgili `.launch` dosyalarındaki dizinleri kendi çalışma alanınıza (örneğin `~/catkin_ws/...`) göre düzenlemeniz gerekmektedir. Aksi takdirde sistem dosyaları bulamayacağı için hata verecektir.
+> * Eğer projeyi yerelde çalıştırmadan, yalnızca **kodları ve demo videosunu inceleyerek değerlendirme yapacaksanız** dosya yollarında hiçbir değişiklik yapmanıza gerek yoktur.
+> 
+> 
+
 1. Depoyu catkin çalışma alanınıza klonlayın:
 
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/berkk-05/bookstore_robot_nav.git bookstore_robot_nav
+git clone [https://github.com/berkk-05/bookstore_robot_nav.git](https://github.com/berkk-05/bookstore_robot_nav.git) bookstore_robot_nav
 
 ```
 
@@ -193,6 +204,8 @@ Summary:
   FAIL: 0
 =====================
 
+```
 
 ```
 
+```
