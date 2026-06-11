@@ -1,6 +1,6 @@
-# Kitapçı Robotu Otonom Navigasyon ve QR Doğrulama Sistemi
+# Otonom Kütüphane Robotu
 
-Bu proje, ROS tabanlı bir servis robotunun simüle edilmiş bir kitapçı ortamında (AWS RoboMaker Bookstore World) SLAM haritalaması, otonom navigasyon ve görev noktalarında QR kod doğrulaması yapmasını sağlayan entegre bir sistemdir.
+Bu proje, ROS tabanlı bir servis robotunun simüle edilmiş bir kütüphane ortamında (AWS RoboMaker Bookstore World) SLAM haritalaması, otonom navigasyon ve görev noktalarında QR kod doğrulaması yapmasını sağlayan entegre bir sistemdir.
 
 ## 🤖 Proje Özeti
 
@@ -42,65 +42,92 @@ sudo apt-get install ros-noetic-cv-bridge
 sudo apt-get install libyaml-cpp-dev
 sudo apt-get install libopencv-dev
 sudo apt-get install libzbar-dev
+
 ```
+
 *(Not: `libzbar-dev` paketi QR Reader düğümünün derlenebilmesi için zorunludur.)*
 
 ## 🚀 Kurulum
 
 1. Depoyu catkin çalışma alanınıza klonlayın:
+
 ```bash
-cd ~/ders_ws/src
+cd ~/catkin_ws/src
 git clone <repo_url> bookstore_robot_nav
+
 ```
 
 2. AWS Bookstore modelleri için Gazebo model yolunu dışa aktarın:
+
 ```bash
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/ders_ws/src/bookstore_robot_nav/models
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/bookstore_robot_nav/models
+
 ```
 
 3. Çalışma alanını derleyin:
+
 ```bash
-cd ~/ders_ws
+cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
+
 ```
 
 4. TurtleBot3 modelini belirtin:
+
 ```bash
 export TURTLEBOT3_MODEL=waffle_pi
+
 ```
 
 ## 🎮 Kullanım
 
 ### Adım 1: Gazebo Simülasyonunu Başlatma
+
 ```bash
 roslaunch bookstore_robot_nav simulation.launch
+
 ```
 
 ### Adım 2: Harita Oluşturma (İlk Kurulum İçin)
+
 Yeni bir terminalde SLAM uygulamasını başlatın:
+
 ```bash
 roslaunch bookstore_robot_nav slam.launch
+
 ```
+
 Başka bir terminalde teleop aracını başlatın ve robotu ortamda gezdirerek haritayı çıkarın:
+
 ```bash
 rosrun turtlebot3_teleop turtlebot3_teleop_key
+
 ```
+
 Haritalama bittiğinde haritayı kaydedin:
+
 ```bash
-rosrun map_server map_saver -f ~/ders_ws/src/bookstore_robot_nav/maps/map
+rosrun map_server map_saver -f ~/catkin_ws/src/bookstore_robot_nav/maps/map
+
 ```
 
 ### Adım 3: Navigasyonu Başlatma
+
 ```bash
 roslaunch bookstore_robot_nav navigation.launch
+
 ```
+
 RViz açıldığında, üst menüden **"2D Pose Estimate"** aracını seçin ve robotun haritadaki ilk konumunu işaretleyerek lokalizasyonunu sağlayın.
 
 ### Adım 4: Görev Yöneticisi ve QR Okuyucuyu Çalıştırma
+
 ```bash
 roslaunch bookstore_robot_nav task_manager.launch
+
 ```
+
 Bu adımdan sonra robot, `config/mission.yaml` dosyasındaki koordinatları sırasıyla gezecek ve belirlenen noktalarda QR doğrulamasını yapacaktır.
 
 ## 📂 Görev Yapılandırması (`mission.yaml`)
@@ -119,11 +146,13 @@ INFORMATION_DESK:
 SCIENCE_SECTION:
   goal: {x: -2.5, y: 3.0, yaw: 1.57}
   qr_expected: "LOCATION=SCIENCE_SECTION"
+
 ```
 
 ## 🧠 Görev Durum Makinesi ve Kurtarma Senaryoları
 
 Görev Yöneticisi (`task_manager.cpp`) şu sırayla çalışır:
+
 1. **INIT**: Sistem başlatılır ve `mission.yaml` okunur.
 2. **GO_TO_LOCATION**: Sıradaki hedefe gidilir. Navigasyon için 1 tekrar deneme hakkı vardır, başarısız olursa hedefe **FAIL** durumu atanır ve zaman aşımı süresi 90 saniyedir.
 3. **QR_VERIFY**: Hedefe ulaşıldığında, kameranın QR kodunu algılaması beklenir. İlk denemede okuyamazsa **2 kez kurtarma manevrası** (sağa/sola dönme) yapar ve bekler. Maksimum denemeden sonra okuma yapılamazsa konum **SKIPPED** olarak işaretlenir.
@@ -133,7 +162,7 @@ Görev Yöneticisi (`task_manager.cpp`) şu sırayla çalışır:
 
 ## 📄 Çıktı Raporu
 
-Görev tamamlandığında robot bir görev özeti çıkarır ve bu dosya `~/ders_ws/src/bookstore_robot_nav/mission_report.txt` adresine kaydedilir:
+Görev tamamlandığında robot bir görev özeti çıkarır ve bu dosya `~/catkin_ws/src/bookstore_robot_nav/mission_report.txt` adresine kaydedilir:
 
 ```text
 === MISSION REPORT ===
@@ -147,10 +176,17 @@ Summary:
   SKIPPED: 1
   FAIL: 0
 =====================
+
 ```
 
 ## 🧑‍💻 Yazar / Katkıda Bulunanlar
+
 KTÜN (Konya Teknik Üniversitesi) Robotik Dersi Projesi
 
 ## 📜 Lisans
+
 MIT License
+
+```
+
+```
