@@ -53,7 +53,7 @@ sudo apt-get install libzbar-dev
 
 ```bash
 cd ~/catkin_ws/src
-git clone <repo_url> bookstore_robot_nav
+git clone https://github.com/berkk-05/bookstore_robot_nav.git bookstore_robot_nav
 
 ```
 
